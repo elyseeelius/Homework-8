@@ -1,4 +1,5 @@
 const box = document.getElementsByTagName('td');
+const text= document.getElementsByTagName('h1')[0];
 let countClick = 0;
 
 
@@ -15,18 +16,30 @@ for (let i = 0; i < box.length; i++) {
             }
         }
         if (box[0].innerHTML !== "" && box[0].innerHTML === box[1].innerHTML && box[0].innerHTML === box[2].innerHTML) {
-            console.log(" won")
+            win(0);
         } else if (box[3].innerHTML !== "" && box[3].innerHTML === box[4].innerHTML && box[3].innerHTML === box[5].innerHTML) {
-            console.log(' elysee won too')
-        } else if(box[6].innerHTML !== "" && box[6].innerHTML === box[7].innerHTML && box[6].innerHTML === box[8].innerHTML){
-            console.log(' won again')
-        }else if(box[0].innerHTML !== "" && box[0].innerHTML === box[4].innerHTML ){
-            console.log(" 1 4 7")
-        }
-
-
-
-
-
+            win(3);
+        } else if (box[6].innerHTML !== "" && box[6].innerHTML === box[7].innerHTML && box[6].innerHTML === box[8].innerHTML) {
+            win(6)
+        } else if (box[0].innerHTML !== "" && box[0].innerHTML === box[3].innerHTML && box[0].innerHTML === box[6].innerHTML) {
+            win(0);
+        } else if (box[1].innerHTML !== "" && box[1].innerHTML === box[4].innerHTML && box[1].innerHTML === box[7].innerHTML) {
+            win(1);
+        } else if (box[2].innerHTML !== "" && box[2].innerHTML === box[5].innerHTML && box[2].innerHTML === box[8].innerHTML) {
+            win(2);
+        } else if (box[0].innerHTML !== "" && box[0].innerHTML === box[4].innerHTML && box[0].innerHTML === box[8].innerHTML) {
+            win(0)
+        } else if (box[2].innerHTML !== "" && box[2].innerHTML === box[4].innerHTML && box[2].innerHTML === box[6].innerHTML) {
+            win(2)
+        } 
     }, false)
+    
+function win(a) {
+    if (box[a].innerHTML === 'x') {
+        text.innerText = "X has won!";
+    } else {
+       text.innerText = "O has won!";
+}
+}
+
 }

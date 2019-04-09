@@ -22,3 +22,11 @@ td{
 .red{
   color:red;
 }
+.text{
+  width: 300px;
+  margin:0 auto;
+  color:orange;
+  text-align: center;
+  margin-top: 50px;
+
+}

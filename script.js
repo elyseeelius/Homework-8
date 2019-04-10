@@ -26,7 +26,7 @@ for (let i = 0; i < box.length; i++) {
         }
         // Set up the background color
         function bgColor(b, c, d, e) {
-            box[b].style.backgroundColor = '#fff'; box[c].style.backgroundColor = '#fff'; box[d].style.backgroundColor = '#fff';
+            box[b].style.backgroundColor = 'orange'; box[c].style.backgroundColor = 'orange'; box[d].style.backgroundColor = 'orange';
         }
         // function of the  winning condition.
         function check(a, b, c) {
@@ -39,7 +39,9 @@ for (let i = 0; i < box.length; i++) {
         }
         // Check the winning condition
         check(0, 1, 2); check(3, 4, 5); check(6, 7, 8); check(0, 3, 6); check(1, 4, 7); check(2, 5, 8); check(0, 4, 8); check(2, 4, 6)
-        if (box[0].innerHTML !== '' && box[1].innerHTML !== '' && box[2].innerHTML !== '' && box[3].innerHTML !== '' && box[4].innerHTML !== '' && box[5].innerHTML !== '' && box[6].innerHTML !== '' && box[7].innerHTML !== '' && box[8].innerHTML !== '') {
+        if (box[0].innerHTML !== '' && box[1].innerHTML !== '' && box[2].innerHTML !== '' &&
+            box[3].innerHTML !== '' && box[4].innerHTML !== '' && box[5].innerHTML !== '' &&
+            box[6].innerHTML !== '' && box[7].innerHTML !== '' && box[8].innerHTML !== '') {
             setTimeout(() => {
                 alert('Cats game!')
                 document.location.reload();
